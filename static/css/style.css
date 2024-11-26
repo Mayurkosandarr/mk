@@ -1,0 +1,148 @@
+/* General Styles */
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background: url("/static/images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+/* Navigation Bar */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background: rgba(177, 177, 177, 0.6);
+    position: fixed; /* Fix the nav bar at the top */
+    top: 0;
+    width: 100%; /* Stretch across the screen */
+    margin: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Section Styling */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Each section takes at least 80% of the screen height */
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
+    border-radius: 10px;
+    margin: 20px 0; /* Space between sections */
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #ff6347;
+}
+
+.section p,
+.section ul {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9em;
+    color: #aaa;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff6347;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .section h2 {
+        font-size: 2em;
+    }
+
+    .section p,
+    .section ul {
+        font-size: 1em;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+    }
+
+    header nav ul li {
+        margin: 10px 5px;
+    }
+}
+
+/* Centering Content */
+.avatar-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+button,
+input[type="submit"] {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #ff4500;
+}

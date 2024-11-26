@@ -1,0 +1,20 @@
+<!-- portfolio_app/templates/portfolio_app/education_list.html -->
+
+{% extends "portfolio_app/base.html" %}
+
+{% block title %}Education{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h2>Education</h2>
+        <ul>
+            {% for edu in education %}
+                <li>
+                    <strong>{{ edu.degree }}</strong> - {{ edu.institution }} ({{ edu.start_year }} - {% if edu.end_year %}{{ edu.end_year }}{% else %}Present{% endif %})
+                    <br>
+                    <em>{{ edu.field_of_study }}</em>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

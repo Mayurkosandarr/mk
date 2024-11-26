@@ -1,0 +1,53 @@
+{% extends "portfolio_app/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div id="home" class="section">
+    <h1 class="text-center">Welcome to My Portfolio</h1>
+    <div class="block_1 hline-bottom">
+        <h3 class="text-center">Explore my journey and projects below.</h3>
+    </div>
+</div>
+
+<div id="about" class="section">
+    <h3 class="text-center">About Me :-</h3>
+    <div class="text-center">
+        {% if about_me.profile_image %}
+            <img src="{{ about_me.profile_image.url }}" alt="{{ about_me.name }}" class="avatar-img">
+        {% else %}
+            <p>No profile image available.</p>
+        {% endif %}
+        <h3>{{ about_me.name }}</h3>
+        <p><h3>{{ about_me.bio }}</h3></p>
+    </div>
+</div>
+
+
+
+<div id="education" class="section">
+    <h2 class="text-center">Education :-</h2>
+    <ul class="text-center">
+        <h3><li>Bachelor of Engineering - University of Mumbai(2021 - 2024)</li></h3>
+        <h3><li>Diploma in Computer Engineering - MSBTE(2018 - 2021)</li></h3>
+    </ul>
+</div>
+
+<div id="projects" class="section">
+    <h2 class="text-center">Projects :-</h2>
+    <ul class="text-center">
+        {% for project in projects %}
+            <h3><li>{{ project.title }}: {{ project.description }} - {{ project.technology }}</li></h3>
+        {% endfor %}
+    </ul>
+</div>
+
+<div id="contact" class="section">
+    <h2 class="text-center">Contact :-</h2>
+    <ul class="text-center">
+        <h3><li><strong>Mayur Kosandar</strong></li></h3>
+        <h3><li><strong>Email:</strong> mayurkosandar018@gmail.com</li></h3>
+        <h3><li><strong>Contact:</strong> 7218244406</li></h3>
+    </ul>
+</div>
+{% endblock %}
